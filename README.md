@@ -27,8 +27,26 @@ Operations to perform:
   Apply all migrations: admin, auth, contenttypes, sessions
 Apply all migrations：应用所有的迁移
  ls
-db.sqlite3      learning_log    ll_env          manage.py
+db.sqlite3      learning_logs    ll_env          manage.py
 
 是否正确创建项目
 python manage.py runserver
 python manage.py runserver 8001 指定端口
+
+创建应用程序
+source ll_env/bin/activate
+python manage.py startapp learning_app
+
+# My apps
+'learning_app',
+
+激活模型
+python manage.py makemigrations learning_app
+python manage.py migrate
+
+创建超级用户
+python manage.py createsuperuser
+
+迁移模型
+python manage.py makemigrations learning_app
+python manage.py migrate

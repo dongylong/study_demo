@@ -1,6 +1,7 @@
-# coding: utf-8
 from django.db import models
 
+
+# Create your models here.
 
 class Topic(models.Model):
     # 用户学习主题
@@ -21,4 +22,4 @@ class Entity(models.Model):
         verbose_name_plural = 'entries'
 
     def __str__(self):
-        return self.text[:50] +"..."
+        return self.text[:50] + "..."
