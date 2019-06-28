@@ -1,16 +1,12 @@
-<!--<!DOCTYPE html>-->
-<!--<html lang="en">-->
-<!--<head>-->
-<!--<meta charset="UTF-8">-->
-<!--<title>topics</title>-->
-<!--</head>-->
-<!--<body>-->
 {% extends "learning_app/base.html" %}
 {% block content %}
 
-<p>Topic:{{ topic }}</p>
-<p>Entries:</p>
+<p>Topic: {{ topic }}</p>
 
+<p>Entries:</p>
+<!--<p>-->
+    <!--<a href="{% url 'learning_app:new_entry' topic.id %}">add new entry</a></p>-->
+<!--</p>-->
 <ul>
     {% for entry in entries %}
     <li>
@@ -24,6 +20,3 @@
     {% endfor %}
 </ul>
 {% endblock content %}
-
-<!--</body>-->
-<!--</html>-->

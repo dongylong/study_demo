@@ -1,10 +1,3 @@
-<!--<!DOCTYPE html>-->
-<!--<html lang="en">-->
-<!--<head>-->
-<!--<meta charset="UTF-8">-->
-<!--<title>topics</title>-->
-<!--</head>-->
-<!--<body>-->
 {% extends "learning_app/base.html" %}
 {% block content %}
 
@@ -13,13 +6,11 @@
 <ul>
     {% for topic in topics %}
     <li>
-        <a href="{% url 'learning_app:topic' topic.id %}">{{topic}}</a>
+        <a href="{% url 'learning_app:topic' topic.id %}">{{ topic }}</a>
     </li>
     {% empty %}
     <li>No topics have been added yet.</li>
     {% endfor %}
 </ul>
+<a href="{% url 'learning_app:new_topic' %}"> add a new topic</a>
 {% endblock content %}
-
-<!--</body>-->
-<!--</html>-->
